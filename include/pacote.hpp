@@ -15,6 +15,7 @@ private:
     const string payload; // Dados da mensagem
 
 public:
+    
     void Packet::login(string name, Server servidor)
     {
 
@@ -46,4 +47,19 @@ public:
             servidor.add_account(novo_perfil); // Manda pacote para o servidor
         }
     };
+
+    //getters and setters
+    uint16_t get_type(){return this->type;}
+    void set_type(uint16_t type){this->type = type;}
+    
+    uint16_t get_seqn(){return this->seqn;}
+    void set_seqn(uint16_t seqn){this->seqn = seqn;}
+    
+    uint16_t get_length(){return this->length;}
+    void set_length(uint16_t length){this->length = length;}
+    
+    uint16_t get_timestamp(){return this->timestamp;}
+    void set_timestamp(uint16_t timestamp){this->timestamp = timestamp;}
+
+    string get_payload(){return this->payload;}
 };
